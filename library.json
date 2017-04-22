@@ -1,0 +1,19 @@
+{
+  "name": "LED Matrix",
+  "description": "An Arduino library to control an LED matrix of arbitrary size",
+  "keywords": "LED, Matrix",
+  "authors": {
+    "name": "Kane Wallmann",
+    "email": "kane@wallmann.ws",
+    "url": "https://github.com/kanewallmann"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanewallmann/ledmatrix-arduino.git"
+  },
+  "version": "1.0.0",
+  "licence": "MIT",
+  "examples": [
+    "examples/*.ino"
+  ]
+}
