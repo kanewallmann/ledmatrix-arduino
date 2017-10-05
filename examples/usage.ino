@@ -13,13 +13,12 @@ int apin[] = { 14,15,16,17,18,19,20,21 };
 LedMatrix matrix( apin, 8, cpin, 8, LED_MATRIX_0DEG );
 
 unsigned long ms;
-int mode, position, len;
+int position, len;
 char* str = "Hello, World!";
 
 void setup()
 {
 	ms = millis();
-	mod = 0;
 	position = 0;
 	len = strlen( str );
 }
