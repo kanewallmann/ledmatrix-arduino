@@ -5,7 +5,7 @@
 #include <limits.h>
 #include "LedMatrix.h"
 
-LedMatrix::ledMatrix(int *apin, int apin_count, int *cpin, int cpin_count, LedMatrixMode mode)
+LedMatrix::LedMatrix(int *apin, int apin_count, int *cpin, int cpin_count, LedMatrixMode mode)
 {
 	this->mode = mode;
 
@@ -131,7 +131,7 @@ void LedMatrix::draw(bool *data, int x, int y, int width, int height)
 	{
 		for( int c = 0; c < height; c++ )
 		{
-			this->SetPixel(x + r, y + c, data[c * width + r]);
+			this->setPixel(x + r, y + c, data[c * width + r]);
 		}
 	}
 }
@@ -158,11 +158,11 @@ void LedMatrix::drawByte(byte data, int x, int y, bool horizontal)
 	{
 		if( horizontal )
 		{
-			this->SetPixel(x + a, y, data & (0x01 << (7 - a)));
+			this->setPixel(x + a, y, data & (0x01 << (7 - a)));
 		}
 		else
 		{
-			this->SetPixel(x, y + a, data & (0x01 << (7 - a)));
+			this->setPixel(x, y + a, data & (0x01 << (7 - a)));
 		}
 	}
 }
@@ -173,11 +173,11 @@ void LedMatrix::drawBytes(byte *data, int count, int x, int y, bool horizontal)
 	{
 		if( horizontal )
 		{
-			this->DrawByte( data[a], x, y + a, horizontal );
+			this->drawByte( data[a], x, y + a, horizontal );
 		}
 		else
 		{
-			this->DrawByte( data[a], x + a, y, horizontal );
+			this->drawByte( data[a], x + a, y, horizontal );
 		}
 	}
 }
