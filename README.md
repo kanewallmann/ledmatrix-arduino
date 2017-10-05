@@ -1,6 +1,8 @@
 LED Matrix
 ==========
 
+![travis](https://travis-ci.org/kanewallmann/ledmatrix-arduino.svg?branch=master)
+
 An Arduino library to control an LED matrix of arbitrary size.
 
 Comes with a 5x8 font library of English characters.
